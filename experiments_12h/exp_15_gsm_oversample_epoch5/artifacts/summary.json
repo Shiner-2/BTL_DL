@@ -1,0 +1,107 @@
+{
+  "n": 1000,
+  "raw_score": 6012,
+  "max_raw_score": 10000,
+  "score_10": 6.012,
+  "score_pct": 0.6012,
+  "extractable": 1000,
+  "numeric_pairs": 959,
+  "buckets": {
+    "10": 578,
+    "5": 19,
+    "1": 137,
+    "0": 266
+  },
+  "rel_error_mean": 3.2431373777772987,
+  "by_type": {
+    "GSM_Rephrased": {
+      "n": 197,
+      "raw_score": 1235,
+      "bucket0": 46,
+      "score_10": 6.269035532994923
+    },
+    "MATH_Rephrased": {
+      "n": 116,
+      "raw_score": 518,
+      "bucket0": 46,
+      "score_10": 4.4655172413793105
+    },
+    "MATH_SV": {
+      "n": 41,
+      "raw_score": 211,
+      "bucket0": 14,
+      "score_10": 5.146341463414634
+    },
+    "GSM_AnsAug": {
+      "n": 209,
+      "raw_score": 1935,
+      "bucket0": 10,
+      "score_10": 9.258373205741627
+    },
+    "GSM_SV": {
+      "n": 97,
+      "raw_score": 232,
+      "bucket0": 48,
+      "score_10": 2.3917525773195876
+    },
+    "GSM_FOBAR": {
+      "n": 122,
+      "raw_score": 352,
+      "bucket0": 57,
+      "score_10": 2.8852459016393444
+    },
+    "MATH_AnsAug": {
+      "n": 173,
+      "raw_score": 1338,
+      "bucket0": 30,
+      "score_10": 7.734104046242774
+    },
+    "MATH_FOBAR": {
+      "n": 45,
+      "raw_score": 191,
+      "bucket0": 15,
+      "score_10": 4.2444444444444445
+    }
+  },
+  "train_seconds": 10781.109933137894,
+  "experiment": "exp_15_gsm_oversample_epoch5",
+  "config": {
+    "name": "exp_15_gsm_oversample_epoch5",
+    "model_name": "/mnt/c/Users/Admin/Desktop/UET/DeepLearning/new_btl_DL/nlphustgpt2-vietnamese",
+    "train_file": "/mnt/c/Users/Admin/Desktop/UET/DeepLearning/new_btl_DL/dataset-math/train.json",
+    "valid_file": "/mnt/c/Users/Admin/Desktop/UET/DeepLearning/new_btl_DL/dataset-math/valid.json",
+    "seed": 42,
+    "drop_unextractable": true,
+    "require_numeric_answer": true,
+    "dataloader_num_workers": 0,
+    "logging_steps": 100,
+    "eval_strategy": "epoch",
+    "save_strategy": "no",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "lr_scheduler_type": "cosine",
+    "target_mode": "answer_norm",
+    "prompt_style": "answer",
+    "output_style": "answer_prefix",
+    "include_type": true,
+    "instruction": "Hãy giải bài toán. Chỉ viết kết quả số cuối cùng, không viết lời giải.",
+    "oversample_type_multipliers": {
+      "GSM_AnsAug": 2,
+      "GSM_FOBAR": 2,
+      "GSM_Rephrased": 2,
+      "GSM_SV": 2
+    },
+    "epochs": 5,
+    "max_length": 384,
+    "per_device_batch_size": 4,
+    "per_device_eval_batch_size": 4,
+    "grad_accum": 8,
+    "lr": 3e-05,
+    "generation": {
+      "max_new_tokens": 8,
+      "num_beams": 3,
+      "do_sample": false,
+      "repetition_penalty": 1.05
+    }
+  }
+}
